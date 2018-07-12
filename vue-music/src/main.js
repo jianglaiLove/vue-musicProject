@@ -5,9 +5,11 @@ import App from './App'
 import router from './router'
 import './assets/stylus/index.styl'
 import 'swiper/dist/css/swiper.css'
+import 'animate.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueLazyLoad from 'vue-lazyload'
 import FastClick from 'fastclick';
+import store from './store'
 
 Vue.use(VueAwesomeSwiper)
 FastClick.attach(document.body)
@@ -21,6 +23,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
